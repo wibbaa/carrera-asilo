@@ -31,7 +31,7 @@ export const MODALIDADES = {
     id: "botargas",
     nombre: "Carrera de Botargas",
     prefijoFolio: "BOT",
-    precioTexto: "2 paquetes de pañal para adulto (marca TENA, talla L)",
+    precioTexto: "$200 MXN",
     metodoPago: "panales",
     incluye: ["Número de participante", "Hidratación", "Mucha diversión"],
     descripcionPago:
