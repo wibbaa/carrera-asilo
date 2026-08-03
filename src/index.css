@@ -1,0 +1,171 @@
+/* ===========================================================
+   Nogales Altruistamente Locos — 4K con Causa + Carrera de Botargas
+   Design tokens
+   =========================================================== */
+:root {
+  --bg: #080b1a;
+  --bg-alt: #0e1330;
+  --bg-card: #11173350;
+  --line: #ffffff1a;
+
+  --pink: #ff2d78;
+  --pink-dim: #ff2d7833;
+  --lime: #cbff3d;
+  --lime-dim: #cbff3d33;
+  --gold: #ffb800;
+  --cyan: #35e5ff;
+
+  --text: #f4f5fb;
+  --muted: #9aa1c2;
+  --muted-2: #6b7299;
+
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+
+  --radius: 14px;
+  --radius-lg: 22px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { min-height: 100%; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% -10%, #3a1a4a55 0%, transparent 45%),
+    radial-gradient(circle at 100% 0%, #0d2b3f88 0%, transparent 40%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  line-height: 1.02;
+  margin: 0;
+}
+
+a { color: inherit; }
+button, input, select, textarea { font-family: inherit; }
+
+.container { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lime);
+}
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 10px 2px var(--lime);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(6px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 999px;
+  padding: 15px 28px;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-primary {
+  background: linear-gradient(100deg, var(--pink), #ff6a3d);
+  color: #0a0a12;
+  box-shadow: 0 8px 24px -8px #ff2d7899;
+}
+.btn-primary:hover:not(:disabled) { box-shadow: 0 10px 30px -6px #ff2d78cc; }
+
+.btn-lime {
+  background: var(--lime);
+  color: #0a0a12;
+  box-shadow: 0 8px 24px -8px #cbff3d99;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1.5px solid var(--line);
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: var(--lime); color: var(--lime); }
+
+.btn-block { width: 100%; }
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  background: #05070f;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 13px 14px;
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--lime); }
+input::placeholder { color: var(--muted-2); }
+
+.field { margin-bottom: 18px; }
+.field-error { color: var(--pink); font-size: 12.5px; margin-top: 6px; font-weight: 600; }
+
+.file-drop {
+  border: 1.5px dashed var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 13.5px;
+}
+.file-drop.has-file { border-color: var(--lime); color: var(--lime); border-style: solid; }
+
+::selection { background: var(--pink); color: #fff; }
+
+@media (max-width: 640px) {
+  .container { padding: 0 16px; }
+}
