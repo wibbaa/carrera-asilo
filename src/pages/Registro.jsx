@@ -294,21 +294,23 @@ function Paso1Datos({ form, setForm, update, errores, onContinuar }) {
 }
 
 function Paso2Pago({ modalidad, archivo, setArchivo, errores, errorGeneral, enviando, onVolver, onSubmit }) {
+  const esTransferencia = modalidad.metodoPago === "transferencia";
+
   return (
     <form onSubmit={onSubmit} style={{ marginTop: 24 }}>
       <p style={{ color: "var(--muted)", marginBottom: 20 }}>
-        Ya casi — solo falta tu {modalidad.id === "4k" ? "pago" : "donación"}.
+        Ya casi — solo falta tu {esTransferencia ? "pago" : "donación"}.
       </p>
 
       <div className="card" style={{ padding: 22 }}>
         <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 6 }}>
-          {modalidad.id === "4k" ? "💳 Cómo pagar" : "🎁 Cómo participar"}
+          {esTransferencia ? "💳 Cómo pagar" : "🎁 Cómo participar"}
         </div>
         <p style={{ color: "var(--muted)", fontSize: 13.5, margin: 0 }}>
           {modalidad.descripcionPago}
         </p>
 
-        {modalidad.id === "4k" && (
+        {esTransferencia && (
           <div
             style={{
               marginTop: 14,
@@ -327,7 +329,7 @@ function Paso2Pago({ modalidad, archivo, setArchivo, errores, errorGeneral, envi
 
         <div className="field" style={{ marginTop: 18, marginBottom: 0 }}>
           <label>
-            {modalidad.id === "4k" ? "Comprobante de transferencia" : "Foto de los paquetes de pañal"}
+            {esTransferencia ? "Comprobante de transferencia" : "Foto de los paquetes de pañal"}
           </label>
           <label
             className={`file-drop ${archivo ? "has-file" : ""}`}
