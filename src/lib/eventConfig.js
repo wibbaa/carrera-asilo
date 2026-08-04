@@ -32,9 +32,9 @@ export const MODALIDADES = {
     nombre: "Carrera de Botargas",
     prefijoFolio: "BOT",
     precioTexto: "$200 MXN",
-    metodoPago: "panales",
+    metodoPago: "transferencia",
     incluye: ["Número de participante", "Hidratación", "Mucha diversión"],
     descripcionPago:
-      "Tu inscripción es en especie: 2 paquetes de pañal para adulto, marca TENA talla L. Sube una foto de los paquetes que vas a donar — la entrega física se confirma el día del evento.",
+      "Realiza tu transferencia SPEI por $200 MXN y sube tu comprobante de pago.",
   },
 };
