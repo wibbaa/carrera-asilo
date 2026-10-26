@@ -1,4 +1,4 @@
-# Registro — 4K con Causa + Carrera de Botargas
+# LANDING PAGE — CARRERA 4KM CON CAUSA + CARRERA DE BOTARGAS
 
 App de registro para el evento de **Nogales Altruistamente Locos** a beneficio del
 **Asilo de Ancianos Franciscano I.A.P.** (viernes 21 de agosto, 7:00 p.m., Unidad
